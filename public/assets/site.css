@@ -161,7 +161,7 @@ section.block{padding-block:84px}
 .shelf .n em{font-style:normal;font-size:.68rem;font-weight:700;color:var(--coral);letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
 .shelf div:not(.wide){opacity:.95}
 
-.visual.person{place-items:end start;padding:0;min-height:420px;overflow:hidden;background:#2a2a2a url("https://turnkeybnbs.com.au/_next/static/media/kyle-intro-video.7beb6faa.jpg") 50% 30%/cover no-repeat}
+.visual.person{place-items:end start;padding:0;min-height:420px;overflow:hidden;background:#2a2a2a url("/img/kyle-intro.jpg") 50% 30%/cover no-repeat}
 .visual.person::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,18,0) 40%,rgba(18,18,18,.8) 100%)}
 .visual.person .cap{position:relative;padding:32px 34px;color:#fff;display:grid;gap:6px}
 .visual.person .loc{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
