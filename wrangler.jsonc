@@ -1,0 +1,19 @@
+{
+  // TurnKey Group website (turnkeygroup.com.au) - Cloudflare Workers with static assets
+  "name": "turnkeygroup-site",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // Sign-up emails go to Kyle. kyle@turnkeybnbs.com.au must be a verified
+  // destination in Email Routing for turnkeygroup.com.au.
+  "send_email": [
+    { "name": "EMAIL", "destination_address": "kyle@turnkeybnbs.com.au" }
+  ],
+  "observability": { "enabled": true }
+}

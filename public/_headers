@@ -1,0 +1,30 @@
+# TurnKey Group – Cloudflare Pages headers (moved from Netlify, 18 Nov 2026)
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://turnkeybnbs.com.au; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000
+  Cross-Origin-Opener-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=604800
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.ico
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800
+
+/site.webmanifest
+  Content-Type: application/manifest+json
+
