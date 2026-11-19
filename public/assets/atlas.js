@@ -1,5 +1,12 @@
 // ATLAS Core application / waiting list. Estimate is worked out on the page; the answers are emailed to Kyle via /api/notify.
 (function(){
+  const tc=document.getElementById('tcount'),tp=document.getElementById('tper');
+  if(tc&&tp){const upd=()=>{const n=+tc.value,m=+tp.value,h=n*m/60*365;document.getElementById('tout').textContent=n;
+    document.getElementById('tperout').textContent=m<60?m+' min':(m/60)+(m===60?' hour':' hours');
+    document.getElementById('thours').textContent=Math.round(h).toLocaleString('en-AU');
+    document.getElementById('tfte').textContent=(h/2080).toFixed(1);
+    document.getElementById('twage').textContent='A$'+Math.round(h*35).toLocaleString('en-AU')};
+    tc.addEventListener('input',upd);tp.addEventListener('input',upd);upd()}
   const form=document.getElementById('acform'); if(!form) return;
   const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
   const st={count:10,cm:null,pt:null,mode:null};
@@ -47,11 +54,12 @@
     form.hidden=true;$('.ac-progress').hidden=true;$('#acstep').hidden=true;const r=$('#acresult');r.hidden=false;
     r.innerHTML=`<div class="ac-done"><span class="t" aria-hidden="true">✓</span><div><b>You're on the ATLAS Core waiting list.</b><p>Thanks${$('#acname').value.trim()?', '+$('#acname').value.trim().split(' ')[0]:''}. We'll check your setup and be in touch before launch.</p></div></div>
       <div class="ac-fit ${f[0]}"><div class="lbl">${f[1]}</div><h3>${f[2]}</h3><p>${f[3]}</p></div>
-      <div class="ac-cards"><div class="ac-kpi hi"><div class="k">ATLAS Core ${p.name} per month</div><div class="v">${aud(monthly(n))}</div><div class="n">${aud(p.base)} for up to ${p.inc} properties${extra?` + ${extra} extra × ${aud(p.extra)}`:''}, plus GST</div></div>
+      <div class="ac-cards"><div class="ac-kpi hi"><div class="k">ATLAS Core ${p.name} per month (founding price)</div><div class="v">${aud(monthly(n))}</div><div class="n">${aud(p.base)} for up to ${p.inc} properties${extra?` + ${extra} extra × ${aud(p.extra)}`:''}, plus GST</div></div>
+      <div class="ac-kpi"><div class="k">Estimated time back</div><div class="v">${Math.round(n*182.5).toLocaleString('en-AU')} hrs</div><div class="n">A year, at about 30 minutes of admin per property a day (estimate)</div></div>
       <div class="ac-kpi"><div class="k">One-off setup</div><div class="v">from ${aud(setup(n))}</div><div class="n">Plus GST. Confirmed once we've checked your setup</div></div></div>
       <table class="ac-table"><thead><tr><th>Plan</th><th class="r">Per month</th><th class="r">Includes</th><th class="r">Each extra property</th></tr></thead><tbody>
       ${PLANS.map(x=>`<tr><td>${x.name}${x===p?'<span class="ac-pill">your plan</span>':''}</td><td class="r">${aud(x.base)}</td><td class="r">up to ${x.inc}</td><td class="r">${aud(x.extra)}</td></tr>`).join('')}</tbody></table>
-      <p class="ac-note">Estimate only, confirmed before launch. Every plan includes your ATLAS's own phone number and call minutes (fair use), the AI, voice, hosting, messaging, ongoing updates and support. Your own software stays on your own accounts and is paid directly to those providers. Prices exclude GST.</p>`;
+      <p class="ac-note">Founding prices, for our first 10 clients only. Estimate only, confirmed before launch. Every plan includes your ATLAS's own phone number and call minutes (fair use), the AI, voice, hosting, messaging, ongoing updates and support. Your own software stays on your own accounts and is paid directly to those providers. Prices exclude GST.</p>`;
     r.scrollIntoView({behavior:'smooth',block:'start'})}
   $('#acnext').addEventListener('click',()=>{const e=err();if(e){$('#acerr').textContent=e;return}if(cur===vis().length-1)return submit();show(cur+1)});
   $('#acback').addEventListener('click',()=>show(cur-1));
