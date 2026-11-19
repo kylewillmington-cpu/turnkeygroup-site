@@ -133,3 +133,5 @@
 .ac-founding{background:var(--coral-soft);border:1px solid #ffd3d5;border-radius:14px;padding:14px 18px;margin-bottom:14px;font-size:.95rem}
 .ac-founding b{color:var(--coral-ink,#d6262f)}
 @media (max-width:860px){.ac-watchbox,.ac-cando{grid-template-columns:1fr;padding:28px 20px}.tres{grid-template-columns:1fr}}
+
+@media (min-width:1100px){.ac-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
