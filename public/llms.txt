@@ -1,0 +1,19 @@
+# TurnKey Group
+
+> TurnKey Group is a Gold Coast, Queensland business offering short-stay solutions Australia-wide through its divisions: guest stays, Airbnb setup and coaching, key safes, host products and guest services. Operated by Netalyst Corporation Pty Ltd (ABN 69 688 734 652), trading as TurnKey BnBs. Superhost rated, top 5% of homes on Airbnb, 20+ years of business experience.
+
+- Contact: kyle@turnkeybnbs.com.au, 0436 322 508, 7am to 7pm
+- Location: Gold Coast, Queensland, Australia (key safe wall at Shop 2, 14–16 Tedder Ave, Main Beach)
+
+## Divisions
+- [TurnKey Stays](https://turnkeystays.com.au/): book short stays on the Gold Coast and in Brisbane direct; most stays pet friendly by approval
+- [TurnKey BnBs](https://turnkeybnbs.com.au/): Airbnb setup, consulting, one-on-one coaching and automation for property owners and hosts
+- [TurnKey Access](https://turnkeyaccess.com.au/): key safe and lockbox hire in Main Beach, Gold Coast, for hosts, guests and trades
+- [TurnKey Pro](https://turnkeygroup.com.au/pro/): products and enhancements for Airbnb hosts (launching soon)
+- [TurnKey Services](https://turnkeygroup.com.au/services/): guest services for TurnKey stays (launching soon)
+
+## Pages
+- [About](https://turnkeygroup.com.au/about/)
+- [FAQ](https://turnkeygroup.com.au/faq/)
+- [Contact](https://turnkeygroup.com.au/contact/)
+- [Tech we use](https://turnkeygroup.com.au/tech-we-use/)
